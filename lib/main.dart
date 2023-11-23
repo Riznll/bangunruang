@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
+        // This is the theme of your application
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
         // the application has a blue toolbar. Then, without quitting the app,
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: homepage(),
+      home: HomePage(),
     );
   }
 }

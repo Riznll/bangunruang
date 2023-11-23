@@ -1,30 +1,50 @@
+import 'package:bangun_datar_c/page/lingkaran_page.dart';
+import 'package:bangun_datar_c/page/persegi_page.dart';
+import 'package:bangun_datar_c/page/segitiga_page.dart';
+import 'package:bangun_datar_c/page/trapesium_page.dart';
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
-  const homepage({Key? key}) : super(key: key);
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
-          "Home Page",
-          style: TextStyle(color: Color(0xFFFFFFFF)),
-        ),
-        backgroundColor: Colors.green,
+            "Home Page",
+            style: TextStyle(color: Color(0xFFFFE000))),
+        backgroundColor: Colors.red.shade900,
       ),
       body: Column(
         children: [
           Row(
             children: [
-              Expanded(child: CustomMenu(tittle: "Persegi", imageAssets: "assets/persegi.png")),
-              Expanded(child: CustomMenu(tittle: "Lingkaran", imageAssets: "assets/lingkaran.png"))
+              Expanded(child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PersegiPage()));
+                  },
+                  child: CustomMenu(title: "Persegi", ImageAsset: "asset/persegi.png",))),
+              Expanded(child: InkWell( onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LingkaranPage()));
+              },
+                  child: CustomMenu(title: "Lingkaran", ImageAsset: "asset/lingkaran.png",))),
             ],
           ),
           Row(
             children: [
-              Expanded(child: CustomMenu(tittle: "Segitiga", imageAssets: "assets/segitiga.png")),
-              Expanded(child: CustomMenu(tittle: "Persegi Panjang", imageAssets: "assets/persegi panjang.png"))
+              Expanded(child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SegitigaPage()));
+                  },
+                  child: CustomMenu(title: "Segitiga", ImageAsset: "asset/segitiga.jpg",))),
+              Expanded(child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>TrapesiumPage()));
+                  },
+                  child: CustomMenu(title: "Trapesium", ImageAsset: "asset/trapesium.png",))),
             ],
           ),
         ],
@@ -35,35 +55,31 @@ class homepage extends StatelessWidget {
 
 class CustomMenu extends StatelessWidget {
   const CustomMenu({
-    super.key,
-    required this.imageAssets,
-    required this.tittle,
+  super.key, required this.ImageAsset, required this.title,
   });
-
-  final String imageAssets;
-  final String tittle;
+  final String ImageAsset;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 130),
-        decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(20)),
-        child: Column(
-          children: [
-            Image.asset(
-              imageAssets,
-              height: 100,
-              width: 100,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Text(
-                tittle,
-                style: TextStyle(color: Color(0xFFFFFFFF)),
-              ),
-            ),
-          ],
-        ));
+        padding: EdgeInsets.symmetric(
+          horizontal: 16, vertical: 100,
+        ),
+        margin: EdgeInsets.symmetric(
+            horizontal: 16, vertical: 8
+        ),
+        decoration: BoxDecoration(color: Colors.red.shade900, borderRadius: BorderRadius.circular(10))
+        ,child: Column(
+      children: [
+        Image.asset(ImageAsset, height: 100,),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(title),
+        ),
+      ],
+    ));
   }
 }
+
+
