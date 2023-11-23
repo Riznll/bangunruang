@@ -18,7 +18,7 @@ class LingkaranPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset("asset/lingkaran.png"),
+            Image.asset("assets/lingkaran.png"),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Lingkaran"),

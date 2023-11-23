@@ -19,7 +19,7 @@ class PersegiPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset("assets/segitiga.png"  ),
+            Image.asset("assets/segitiga.jpg"  ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Segitiga" ),

@@ -18,7 +18,7 @@ class SegitigaPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset("asset/segitiga.jpg"),
+            Image.asset("assets/segitiga.jpg"),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Segitiga"),

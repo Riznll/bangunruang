@@ -26,11 +26,11 @@ class HomePage extends StatelessWidget {
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>PersegiPage()));
                   },
-                  child: CustomMenu(title: "Persegi", ImageAsset: "asset/persegi.png",))),
+                  child: CustomMenu(title: "Persegi", ImageAsset: "assets/persegi.png",))),
               Expanded(child: InkWell( onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>LingkaranPage()));
               },
-                  child: CustomMenu(title: "Lingkaran", ImageAsset: "asset/lingkaran.png",))),
+                  child: CustomMenu(title: "Lingkaran", ImageAsset: "assets/lingkaran.png",))),
             ],
           ),
           Row(
@@ -39,12 +39,12 @@ class HomePage extends StatelessWidget {
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>SegitigaPage()));
                   },
-                  child: CustomMenu(title: "Segitiga", ImageAsset: "asset/segitiga.jpg",))),
+                  child: CustomMenu(title: "Segitiga", ImageAsset: "assets/segitiga.jpg",))),
               Expanded(child: InkWell(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>TrapesiumPage()));
                   },
-                  child: CustomMenu(title: "Trapesium", ImageAsset: "asset/trapesium.png",))),
+                  child: CustomMenu(title: "Trapesium", ImageAsset: "assets/trapesium.png",))),
             ],
           ),
         ],

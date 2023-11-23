@@ -17,7 +17,7 @@ class TrapesiumPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset("asset/trapesium.png"),
+            Image.asset("assets/trapesium.png"),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Trapesium"),
